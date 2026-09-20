@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        NOVA<span>.</span>GALLERY
+    </div>
+
+    <button id="themeBtn">🌙</button>
+</header>
+
+<section class="hero">
+
+    <p class="small-title">CURATED VISUALS</p>
+
+    <h1>
+        Discover <span>Beautiful</span><br>
+        Moments.
+    </h1>
+
+    <p>
+        Explore a collection of beautiful images with
+        search, categories and interactive lightbox.
+    </p>
+
+</section>
+
+<section class="toolbar">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search images..."
+    >
+
+    <div class="filters">
+
+        <button class="active" onclick="filterImages('all', this)">
+            All
+        </button>
+
+        <button onclick="filterImages('nature', this)">
+            Nature
+        </button>
+
+        <button onclick="filterImages('city', this)">
+            City
+        </button>
+
+        <button onclick="filterImages('travel', this)">
+            Travel
+        </button>
+
+    </div>
+
+</section>
+
+<section class="gallery" id="gallery"></section>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="close" onclick="closeLightbox()">×</button>
+
+    <button class="previous" onclick="changeImage(-1)">
+        ❮
+    </button>
+
+    <img id="lightboxImage">
+
+    <button class="next" onclick="changeImage(1)">
+        ❯
+    </button>
+
+    <p id="caption"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
